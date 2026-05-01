@@ -121,13 +121,13 @@ FROM (
     VALUES
     ('Lars'),('Emma'),('Noah'),('Sophie'),('Sem'),('Julia'),('Liam'),('Mila'),('Luca'),('Tess'),
     ('Finn'),('Sara'),('Thijs'),('Lot'),('Mees'),('Fleur'),('Noud'),('Yara'),('Cas'),('Lina'),
-    ('Daan'),('Zoë'),('Luuk'),('Floor'),('Jelle'),('Isabel'),('Thomas'),('Lotte'),('Sam'),('Nova'),
+    ('Daan'),('ZoÃ«'),('Luuk'),('Floor'),('Jelle'),('Isabel'),('Thomas'),('Lotte'),('Sam'),('Nova'),
     ('Tim'),('Elin'),('Jesse'),('Myrthe'),('Max'),('Roos'),('Sven'),('Amber'),('Bas'),('Lieve'),
     ('Gijs'),('Mara'),('Hidde'),('Fien'),('Milan'),('Esmee'),('Joris'),('Liv'),('Stijn'),('Noor'),
     ('Ruben'),('Lina'),('Teun'),('Elise'),('Nick'),('Hanna'),('Floris'),('Pien'),('Jasmijn'),('Merel'),
     ('Bram'),('Isis'),('Kees'),('Vera'),('Wout'),('Lune'),('Tuur'),('Fenne'),('Boaz'),('Saar'),
     ('Guus'),('Mevrouw'),('Jip'),('Sterre'),('Pim'),('Nova'),('Olaf'),('Maeve'),('Kian'),('Liza'),
-    ('Johan'),('Fabiënne'),('Sander'),('Evi'),('Mats'),('Freek'),('Rens'),('Lara'),('Duco'),('Nienke'),
+    ('Johan'),('FabiÃ«nne'),('Sander'),('Evi'),('Mats'),('Freek'),('Rens'),('Lara'),('Duco'),('Nienke'),
     ('Bart'),('Linde'),('Jurre'),('Minke'),('Koen'),('Zara'),('Ties'),('Fay'),('Jochem'),('Elodie'),
     ('Dirk'),('Sterre'),('Maarten'),('Lien'),('Jort'),('Fien'),('Seb'),('Mila'),('Luuk'),('Yenthe')
 ) fn(FirstName)
@@ -161,7 +161,7 @@ VALUES
 ('German B'             ,4 ,'Intermediate German'              ,NULL),
 ('French B'             ,4 ,'Intermediate French'              ,NULL),
 ('History A'            ,3 ,'Modern European history'          ,NULL),
-('History B'            ,4 ,'World history 1900–present'       ,NULL),
+('History B'            ,4 ,'World history 1900â€“present'       ,NULL),
 ('Geography'            ,4 ,'Human & physical geography'       ,NULL),
 ('Economics'            ,4 ,'Micro & macro economics'          ,NULL),
 ('Business Economics'   ,4 ,'Entrepreneurship & accounting'    ,NULL),
@@ -190,7 +190,7 @@ VALUES
 ('Mechanics & Materials',5 ,'Engineering mechanics'            ,NULL),
 ('Thermodynamics'       ,5 ,'Heat & energy transfer'           ,NULL),
 ('Electronics'          ,5 ,'Analog & digital circuits'        ,NULL),
-('Dutch Literature'     ,4 ,'17th–21st century literature'     ,NULL),
+('Dutch Literature'     ,4 ,'17thâ€“21st century literature'     ,NULL),
 ('English Literature'   ,4 ,'British & American classics'      ,NULL),
 ('Drama & Theater'      ,3 ,'Acting & stage production'        ,NULL),
 ('Dance'                ,3 ,'Contemporary & classical dance'   ,NULL),
@@ -1640,7 +1640,7 @@ GROUP BY UPPER(r.Semester), sch.SchoolName, sch.City
 HAVING SUM(c.Credits) > 10
 ORDER BY TotalCredits DESC, AverageGrade DESC;
 
---LIKE + Wildcards – Pattern Matching (Questions 1–10) 
+--LIKE + Wildcards â€“ Pattern Matching (Questions 1â€“10) 
 
 SELECT StudentID, FirstName, LastName, FullName
 FROM Students
@@ -1696,7 +1696,7 @@ WHERE RoomNumber LIKE '[A-Z][0-9][A-Z]'
    OR RoomNumber LIKE '[A-Z][A-Z][0-9][A-Z]'  
 ORDER BY RoomNumber;
 
---LIKE + Functions + Conditions (Questions 11–20) 
+--LIKE + Functions + Conditions (Questions 11â€“20) 
 
 SELECT StudentID, FirstName, LastName, FullName
 FROM Students
@@ -1818,7 +1818,7 @@ WHERE LEN(FullName) BETWEEN 10 AND 14
   AND FullName NOT LIKE '% % %'  
 ORDER BY NameLength, FullName;
 
---LIKE in JOIN / Subquery / HAVING (Questions 21–30) 
+--LIKE in JOIN / Subquery / HAVING (Questions 21â€“30) 
 
 SELECT s.StudentID, s.FirstName, s.LastName, c.CourseID, c.CourseName
 FROM Students s
